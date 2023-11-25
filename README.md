@@ -4,7 +4,7 @@
 
 1. For simplicity, Store data in-memory and not in an external database.
 
-2. For security, Limit API access by following the rules below:
+2. For security, API access are limited by following the rules below:
 
 - Anyone can read data.
 
