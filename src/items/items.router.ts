@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import * as ItemService from './items.service';
 import { BaseItem, Item } from './item.interface';
+import { checkJwt } from '../middleware/authz.middleware';
 
 // Router Definition
 export const itemsRouter = express.Router();
@@ -34,6 +35,8 @@ itemsRouter.get('/:id', async (req: Request, res: Response) => {
 		res.status(500).send(e instanceof Error ? e.message : e);
 	}
 });
+
+itemsRouter.use(checkJwt);
 
 // POST items
 itemsRouter.post('/', async (req: Request, res: Response) => {
