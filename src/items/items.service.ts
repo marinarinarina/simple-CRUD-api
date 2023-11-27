@@ -1,6 +1,4 @@
 // Access and manipulate records from store.
-
-// Data Model Interfaces
 import { BaseItem, Item } from './item.interface';
 import { Items } from './items.interface';
 

@@ -7,7 +7,6 @@ import { checkJwt } from '../middleware/authz.middleware';
 export const itemsRouter = express.Router();
 
 // Controller Definitions
-
 // GET items
 itemsRouter.get('/', async (req: Request, res: Response) => {
 	try {
